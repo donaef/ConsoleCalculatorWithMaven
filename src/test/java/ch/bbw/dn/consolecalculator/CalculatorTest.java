@@ -31,4 +31,15 @@ public class CalculatorTest {
 		assertTrue(testee.subtraktion(25, 10) == 15);
 	}
 	
+	@Test(expected=java.lang.ArithmeticException.class)
+	public void testDivisionDurchNullArithmeticException() {
+		testee.division(10, 0);
+	}
+	
+	@Test
+	public void testDivisionDurchNullArithmeticExceptionNotRaised() 
+	    throws IndexOutOfBoundsException {
+		testee.division(10, 2);
+	}
+	
 }
