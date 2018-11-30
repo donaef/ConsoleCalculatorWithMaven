@@ -36,4 +36,10 @@ public class CalculatorTest {
 		testee.division(10, 0);
 	}
 	
+	@Test
+	public void testDivisionDurchNullArithmeticExceptionNotRaised() 
+	    throws IndexOutOfBoundsException {
+		testee.division(10, 2);
+	}
+	
 }
