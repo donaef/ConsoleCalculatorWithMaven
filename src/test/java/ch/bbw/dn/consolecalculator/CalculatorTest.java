@@ -40,6 +40,11 @@ public class CalculatorTest {
 	public void testSummeEinePositiveEineMaxValueIsOk() {
 		assertTrue(testee.summe(10, Integer.MAX_VALUE) == 10 + Integer.MAX_VALUE);
 	}
+	
+	@Test
+	public void testSummeEinePositiveEineMinValueIsOk() {
+		assertTrue(testee.summe(10, Integer.MIN_VALUE) == 10 + Integer.MIN_VALUE);
+	}
 
 	@Test
 	public void testSubtractionZweiPositiveIsOk() {
