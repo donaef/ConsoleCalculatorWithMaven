@@ -122,7 +122,10 @@ public class CalculatorTest {
 		assertTrue(testee.division(10, 5) == 2);
 	}
 	
-	
+	@Test
+	public void testDivisionEinePositivEineNegativIsOk() {
+		assertTrue(testee.division(10, (-2)) == (-5));
+	}
 	
 	//protected - Der Testfall muss sich im gleichen Paket wie die getestete Methode befinden.
 
