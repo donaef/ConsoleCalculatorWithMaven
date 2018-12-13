@@ -37,9 +37,12 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void testDivisionDurchNullArithmeticExceptionNotRaised() 
-	    throws IndexOutOfBoundsException {
+	public void testDivisionDurchNullArithmeticExceptionNotRaised() throws IndexOutOfBoundsException {
 		testee.division(10, 2);
 	}
+	
+	//protected - Der Testfall muss sich im gleichen Paket wie die getestete Methode befinden.
+
+	//private 	- Das Testen von privaten Methoden ist etwas komplizierter. Es gibt die Möglichkeit "dp4j" und eine "Reflection" zu verwenden.
 	
 }
