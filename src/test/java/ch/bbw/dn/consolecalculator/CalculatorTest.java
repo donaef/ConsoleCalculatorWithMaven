@@ -100,6 +100,11 @@ public class CalculatorTest {
 		assertTrue(testee.subtraktion(Integer.MIN_VALUE, Integer.MAX_VALUE) == Integer.MIN_VALUE - Integer.MAX_VALUE);
 	}
 	
+	@Test
+	public void testSubtractionBeideNullResultIsZeroIsOk() {
+		assertTrue(testee.subtraktion(0, 0) == 0);
+	}
+	
 	
 	
 	@Test(expected=java.lang.ArithmeticException.class)
