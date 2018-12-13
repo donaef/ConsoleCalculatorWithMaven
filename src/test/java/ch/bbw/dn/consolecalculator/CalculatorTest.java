@@ -71,8 +71,13 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void testSubtractionEineNegativEinePositiveIsOk() {
+	public void testSubtractionEineNegativeEinePositiveIsOk() {
 		assertTrue(testee.subtraktion((-5), 10) == (-15));
+	}
+	
+	@Test
+	public void testSubtractionZweiNegativeArithmeticExceptionNotRaised() throws IndexOutOfBoundsException  {
+		testee.subtraktion((-5), (-5));
 	}
 	
 	
