@@ -90,6 +90,12 @@ public class CalculatorTest {
 		assertTrue(testee.subtraktion(7, Integer.MIN_VALUE) == 7 - Integer.MIN_VALUE);
 	}
 	
+	@Test
+	public void testSubtractionZweiPositiveResultIsZeroIsOk() {
+		assertTrue(testee.subtraktion(10, 10) == 0);
+	}
+	
+	
 	
 	@Test(expected=java.lang.ArithmeticException.class)
 	public void testDivisionDurchNullArithmeticException() {
