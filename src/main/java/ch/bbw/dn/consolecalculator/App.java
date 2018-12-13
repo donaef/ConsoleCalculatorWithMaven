@@ -20,8 +20,10 @@ public class App {
 		System.out.println();
 		
 		valueA = 10;
-		valueA = 20;
-		System.out.println("Summe " + valueA + " + " + valueB + " = " + calculator.summe(10, 20));
+		valueB =  2;
+		System.out.println("Summe	 	" + valueA + " + " + valueB + " = " + calculator.summe(valueA, valueB));
+		System.out.println("Subtraktion	" + valueA + " - " + valueB + " = " + calculator.subtraktion(valueA, valueB));
+		System.out.println("Division 	" + valueA + " / " + valueB + " = " + calculator.division(valueA, valueB));
 		
     }
 }

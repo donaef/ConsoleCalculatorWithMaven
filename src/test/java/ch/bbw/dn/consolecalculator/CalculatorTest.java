@@ -25,6 +25,11 @@ public class CalculatorTest {
 	public void testSummeZweiPositiveIsOk() {
 		assertTrue(testee.summe(10, 25) == 35);
 	}
+	
+	@Test
+	public void testSummeEinePositiveEineNegativIsOk() {
+		assertTrue(testee.summe(10, (-5)) == 5);
+	}
 
 	@Test
 	public void testSubtractionZweiPositiveIsOk() {
@@ -44,5 +49,6 @@ public class CalculatorTest {
 	//protected - Der Testfall muss sich im gleichen Paket wie die getestete Methode befinden.
 
 	//private 	- Das Testen von privaten Methoden ist etwas komplizierter. Es gibt die Möglichkeit "dp4j" und eine "Reflection" zu verwenden.
+	
 	
 }
