@@ -30,6 +30,11 @@ public class CalculatorTest {
 	public void testSummeEinePositiveEineNegativIsOk() {
 		assertTrue(testee.summe(10, (-5)) == 5);
 	}
+	
+	@Test
+	public void testSummeEinePositiveEineNullIsOk() {
+		assertTrue(testee.summe(10, 0) == 10);
+	}
 
 	@Test
 	public void testSubtractionZweiPositiveIsOk() {
