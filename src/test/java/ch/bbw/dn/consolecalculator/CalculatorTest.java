@@ -80,6 +80,10 @@ public class CalculatorTest {
 		testee.subtraktion((-5), (-5));
 	}
 	
+	@Test
+	public void testSubtractionEineMaxValueEinePositiveIsOk() {
+		assertTrue(testee.subtraktion(Integer.MAX_VALUE, 10) == Integer.MAX_VALUE - 10);
+	}
 	
 	
 	@Test(expected=java.lang.ArithmeticException.class)
