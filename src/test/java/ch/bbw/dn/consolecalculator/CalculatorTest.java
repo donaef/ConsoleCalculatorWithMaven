@@ -142,6 +142,13 @@ public class CalculatorTest {
 		assertTrue(testee.division(Integer.MAX_VALUE, Integer.MAX_VALUE) == Integer.MAX_VALUE / Integer.MAX_VALUE);
 	}
 	
+	@Test
+	public void testDivisionBeideMaxVeIsOk() {
+		assertTrue(testee.division((Integer.MAX_VALUE+1), 2) == (Integer.MAX_VALUE+1) / 2);
+	}
+	
+	
+	
 	//protected - Der Testfall muss sich im gleichen Paket wie die getestete Methode befinden.
 
 	//private 	- Das Testen von privaten Methoden ist etwas komplizierter. Es gibt die Möglichkeit "dp4j" und eine "Reflection" zu verwenden.
