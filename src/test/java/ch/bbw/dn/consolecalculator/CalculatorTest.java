@@ -35,6 +35,11 @@ public class CalculatorTest {
 	public void testSummeEinePositiveEineNullIsOk() {
 		assertTrue(testee.summe(10, 0) == 10);
 	}
+	
+	@Test
+	public void testSummeEinePositiveEineMaxValueIsOk() {
+		assertTrue(testee.summe(10, Integer.MAX_VALUE) == 10 + Integer.MAX_VALUE);
+	}
 
 	@Test
 	public void testSubtractionZweiPositiveIsOk() {
