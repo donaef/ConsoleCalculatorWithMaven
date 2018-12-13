@@ -85,6 +85,11 @@ public class CalculatorTest {
 		assertTrue(testee.subtraktion(Integer.MAX_VALUE, 10) == Integer.MAX_VALUE - 10);
 	}
 	
+	@Test
+	public void testSubtractionEinePositiveEineMinValueIsOk() {
+		assertTrue(testee.subtraktion(7, Integer.MIN_VALUE) == 7 - Integer.MIN_VALUE);
+	}
+	
 	
 	@Test(expected=java.lang.ArithmeticException.class)
 	public void testDivisionDurchNullArithmeticException() {
