@@ -21,6 +21,8 @@ public class CalculatorTest {
 		testee = new Calculator();
     }
 	
+	
+	
 	@Test
 	public void testSummeZweiPositiveIsOk() {
 		assertTrue(testee.summe(10, 25) == 35);
@@ -61,10 +63,19 @@ public class CalculatorTest {
 		assertTrue(testee.summe(5, (Integer.MAX_VALUE+1)) == 5 + Integer.MAX_VALUE + 1);
 	}
 	
+	
+	
 	@Test
 	public void testSubtractionZweiPositiveIsOk() {
 		assertTrue(testee.subtraktion(25, 10) == 15);
 	}
+	
+	@Test
+	public void testSubtractionEineNegativEinePositiveIsOk() {
+		assertTrue(testee.subtraktion((-5), 10) == (-15));
+	}
+	
+	
 	
 	@Test(expected=java.lang.ArithmeticException.class)
 	public void testDivisionDurchNullArithmeticException() {
@@ -75,6 +86,8 @@ public class CalculatorTest {
 	public void testDivisionDurchNullArithmeticExceptionNotRaised() throws IndexOutOfBoundsException {
 		testee.division(10, 2);
 	}
+	
+	
 	
 	//protected - Der Testfall muss sich im gleichen Paket wie die getestete Methode befinden.
 
