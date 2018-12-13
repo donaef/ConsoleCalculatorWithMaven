@@ -57,6 +57,11 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testSummeEinePositiveEineMehrAlsMaxValueIsOk() {
+		assertTrue(testee.summe(5, (Integer.MAX_VALUE+1)) == 5 + Integer.MAX_VALUE + 1);
+	}
+	
+	@Test
 	public void testSubtractionZweiPositiveIsOk() {
 		assertTrue(testee.subtraktion(25, 10) == 15);
 	}
