@@ -1,3 +1,10 @@
 language: java
 sudo: false
 script: mvn install
+deploy:
+  provider: releases
+  api_key:
+    secure: dzWH645Rmz8p4VKs40KLFIEGW25DB4IEFKmxBaLgHWzFB1OgzBlRwBWGUvkNzjO33WaSMxlifK8yHcNsawXpKK+gydmJraFpwBMU3M7bSIJXHXPnBbyOv4+cFIsHvqE/iDARm8i+Tko96ukbBsF8WNNJ3qEoS6WbuuTZ5rpfzTxNO/+65OmWFkWDZsdfyMI8W7CUvRkqzWDvPw/E3ysYgXhJXp3YCH2gurtAD3DpZ+9GUrEn0yqonr94acDbMa3/CYPweqrYoairDSBNpbMvneKS3LwWga6F1DWjTzMx3RsxncESNtHUEMVG1+tWoZqINgwd8pt1WwQdoyUJDF0c6Nc64+poyMKq85SHdhItZmjdXE+FQx+kY7OxIznEKsNQH1Bq6j3emg9C3bu6zY0vZ5Yf0G8g0mYVY844ysAT4vx0xlIAtxMBOgjz3zQEUfyxujZhlqqBwog8A8Ht+aCnXWoDHI+jpeqf2+9wpzOZMvipdahxFlPjtcktnBT8gZCRIUWlaKdbrWfpvip37jUL+OCaGP+SYK5WBicGeBviIRf17afXrnH/W2KPYo7nxAeBiTkBnlEKjhnEMVmqe/mon/Nk+45nrPU3lDOV6dEG6SuygFBmZCEhY7gkQUSN9AxpWBHWe2+7HdGZQRtRxU0qCCfINOmOK8RuGaSa6BRWhpE=
+  file: "/home/travis/.m2/repository/ch/bbw/dn/ConsoleCalculatorWithMaven/0.0.1-SNAPSHOT/ConsoleCalculatorWithMaven-0.0.1-SNAPSHOT.jar"
+  on:
+    repo: donaef/ConsoleCalculatorWithMaven
