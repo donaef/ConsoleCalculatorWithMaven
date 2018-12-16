@@ -38,9 +38,9 @@ public class CalculatorTest {
 		assertTrue(testee.summe(10, 0) == 10);
 	}
 	
-	@Test
+	@Test(expected=java.lang.ArithmeticException.class)
 	public void testSummeEinePositiveEineMaxValueIsOk() {
-		assertTrue(testee.summe(10, Integer.MAX_VALUE) == 10 + Integer.MAX_VALUE);
+		testee.summe(10, Integer.MAX_VALUE);
 	}
 	
 	@Test
@@ -58,9 +58,9 @@ public class CalculatorTest {
 		assertTrue(testee.summe(5, (-5)) == 0);
 	}
 	
-	@Test
-	public void testSummeEinePositiveEineMehrAlsMaxValueIsOk() {
-		assertTrue(testee.summe(5, (Integer.MAX_VALUE+1)) == 5 + Integer.MAX_VALUE + 1);
+	@Test(expected=java.lang.ArithmeticException.class)
+	public void testSummeMaxValueIsOk() {
+		testee.summe(Integer.MAX_VALUE, Integer.MAX_VALUE);
 	}
 	
 	
@@ -85,9 +85,9 @@ public class CalculatorTest {
 		assertTrue(testee.subtraktion(Integer.MAX_VALUE, 10) == Integer.MAX_VALUE - 10);
 	}
 	
-	@Test
+	@Test(expected=java.lang.ArithmeticException.class)
 	public void testSubtractionEinePositiveEineMinValueIsOk() {
-		assertTrue(testee.subtraktion(7, Integer.MIN_VALUE) == 7 - Integer.MIN_VALUE);
+		testee.subtraktion(7, Integer.MIN_VALUE);
 	}
 	
 	@Test
@@ -95,9 +95,9 @@ public class CalculatorTest {
 		assertTrue(testee.subtraktion(10, 10) == 0);
 	}
 	
-	@Test
+	@Test(expected=java.lang.ArithmeticException.class)
 	public void testSubtractionEineMinValueEineMaxValueIsOk() {
-		assertTrue(testee.subtraktion(Integer.MIN_VALUE, Integer.MAX_VALUE) == Integer.MIN_VALUE - Integer.MAX_VALUE);
+		testee.subtraktion(Integer.MIN_VALUE, Integer.MAX_VALUE);
 	}
 	
 	@Test
