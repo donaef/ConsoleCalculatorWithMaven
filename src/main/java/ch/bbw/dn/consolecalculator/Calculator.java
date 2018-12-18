@@ -49,6 +49,7 @@ public class Calculator {
 		} else {
 			return value1 / value2;
 		}
+		
 	}
 	
 }

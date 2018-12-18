@@ -154,4 +154,6 @@ public class CalculatorTest {
 	//private 	- Das Testen von privaten Methoden ist etwas komplizierter. Es gibt die Möglichkeit "dp4j" und eine "Reflection" zu verwenden.
 	
 	
+	
 }
+
