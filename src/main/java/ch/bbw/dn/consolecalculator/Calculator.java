@@ -12,16 +12,16 @@ package ch.bbw.dn.consolecalculator;
 
 public class Calculator {
 	
-	public int summe(int summand1, int summand2) throws java.lang.ArithmeticException {
+	public int addition(int value1, int value2) throws java.lang.ArithmeticException {
 		
 		
-		long summe = (long) summand1 + (long) summand2;
+		long summe = (long) value1 + (long) value2;
 		if (summe > Integer.MAX_VALUE) {
 			throw new ArithmeticException("Summe is bigger than Integer.MAX_VALUE");
 		}else if (summe < Integer.MIN_VALUE) {
 			throw new ArithmeticException("Summe is smaller than Integer.MIN_VALUE");
 		} else {
-			return summand1 + summand2;
+			return value1 + value2;
 		}
 		
 	}
@@ -50,6 +50,10 @@ public class Calculator {
 			return value1 / value2;
 		}
 		
+	}
+	
+	public int multiplication(int value1, int value2) {
+		return 0;
 	}
 	
 }

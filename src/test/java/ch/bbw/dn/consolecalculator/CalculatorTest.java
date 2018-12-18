@@ -25,42 +25,42 @@ public class CalculatorTest {
 	
 	@Test
 	public void testSummeZweiPositiveIsOk() {
-		assertTrue(testee.summe(10, 25) == 35);
+		assertTrue(testee.addition(10, 25) == 35);
 	}
 	
 	@Test
 	public void testSummeEinePositiveEineNegativIsOk() {
-		assertTrue(testee.summe(10, (-5)) == 5);
+		assertTrue(testee.addition(10, (-5)) == 5);
 	}
 	
 	@Test
 	public void testSummeEinePositiveEineNullIsOk() {
-		assertTrue(testee.summe(10, 0) == 10);
+		assertTrue(testee.addition(10, 0) == 10);
 	}
 	
 	@Test(expected=java.lang.ArithmeticException.class)
 	public void testSummeEinePositiveEineMaxValueIsOk() {
-		testee.summe(10, Integer.MAX_VALUE);
+		testee.addition(10, Integer.MAX_VALUE);
 	}
 	
 	@Test
 	public void testSummeEinePositiveEineMinValueIsOk() {
-		assertTrue(testee.summe(10, Integer.MIN_VALUE) == 10 + Integer.MIN_VALUE);
+		assertTrue(testee.addition(10, Integer.MIN_VALUE) == 10 + Integer.MIN_VALUE);
 	}
 
 	@Test
 	public void testSummeZweiNegativeIsOk() {
-		assertTrue(testee.summe((-5), (-5)) == (-10));
+		assertTrue(testee.addition((-5), (-5)) == (-10));
 	}
 	
 	@Test
 	public void testSummeEinePositiveEineNegativeResultIsZeroIsOk() {
-		assertTrue(testee.summe(5, (-5)) == 0);
+		assertTrue(testee.addition(5, (-5)) == 0);
 	}
 	
 	@Test(expected=java.lang.ArithmeticException.class)
 	public void testSummeMaxValueIsOk() {
-		testee.summe(Integer.MAX_VALUE, Integer.MAX_VALUE);
+		testee.addition(Integer.MAX_VALUE, Integer.MAX_VALUE);
 	}
 	
 	
@@ -145,6 +145,13 @@ public class CalculatorTest {
 	@Test
 	public void testDivisionBeideMaxVeIsOk() {
 		assertTrue(testee.division((Integer.MAX_VALUE+1), 2) == (Integer.MAX_VALUE+1) / 2);
+	}
+	
+	
+	
+	@Test
+	public void testMultiplicationBeidePositivIsOk() {
+		assertTrue(testee.division(10, 2) == 20);
 	}
 	
 	
