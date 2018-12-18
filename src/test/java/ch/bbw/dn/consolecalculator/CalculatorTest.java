@@ -151,7 +151,7 @@ public class CalculatorTest {
 	
 	@Test
 	public void testMultiplicationBeidePositivIsOk() {
-		assertTrue(testee.division(10, 2) == 20);
+		assertTrue(testee.multiplication(10, 2) == 20);
 	}
 	
 	

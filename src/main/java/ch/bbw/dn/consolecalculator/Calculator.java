@@ -53,7 +53,16 @@ public class Calculator {
 	}
 	
 	public int multiplication(int value1, int value2) {
-		return 0;
+		
+		long result = (long) value1 * (long) value2;
+		if (result > Integer.MAX_VALUE) {
+			throw new ArithmeticException("Result is bigger than Integer.MAX_VALUE");
+		}else if (result < Integer.MIN_VALUE) {
+			throw new ArithmeticException("Result is smaller than Integer.MIN_VALUE");
+		} else {
+			return value1 * value2;
+		}
+		
 	}
 	
 }
