@@ -5,9 +5,10 @@ package ch.bbw.dn.consolecalculator;
  * - kann zwei Zahlen addieren
  * - kann zwei Zahlen subtrahieren
  * - kann zwei Zahlen dividieren
+ * - kann zwei Zahlen multiplizieren
  * 
  * @author Dominik Näf
- * @version 0.0.1
+ * @version 18.12.2018
  */
 
 public class Calculator {

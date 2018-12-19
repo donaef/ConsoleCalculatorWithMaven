@@ -3,7 +3,7 @@ package ch.bbw.dn.consolecalculator;
 /**
  * Console Calculator App
  * @author Dominik Näf
- * @version 0.0.1
+ * @version 18.12.2018
  *
  */
 
